@@ -43,8 +43,28 @@ app.UseAuthorization();
         pattern: "products/details/{id}",
         defaults: new { controller = "Products", action = "Details" }
     );
-    //Default route should be last
+
+//Adding contraint routes
+ // Adding constraint routes 
     app.MapControllerRoute(
+        name: "blog-archive",
+        pattern: "blog/{year:int:min(2020)}/{month:int:range(1,12)}/{day:int:range(1,31)?}",
+        defaults: new { controller = "Blog", action = "Archive" }
+    );
+    app.MapControllerRoute(
+        name: "user-profile",
+        pattern: "user/{username:minlength(3)}/{tab}",
+        defaults: new { controller = "User", action = "Profile" }
+    );
+    app.MapControllerRoute(
+        name: "api-versioned",
+        pattern: "api/v{version:regex(^[0-9]+\\.[0-9]+$)}/{action}",
+        defaults: new { controller = "Api", action = "Version" }
+    );
+
+
+    //Default route should be last
+app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 

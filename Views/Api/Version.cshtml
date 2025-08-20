@@ -1,0 +1,22 @@
+
+@{
+    ViewData["Title"] = "Api - Version";
+}
+
+<div class="container mt-5">
+    <h2>@ViewData["Title"]</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th>API Version</th>
+            <td>@Model.apiversion</td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>@Model.status</td>
+        </tr>
+        <tr>
+            <th>Timestamp</th>
+            <td>@Model.timestamp</td>
+        </tr>
+    </table>
+</div>

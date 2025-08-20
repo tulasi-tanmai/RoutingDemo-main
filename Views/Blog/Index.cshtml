@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Blog - Index";
+    ViewData["Message"] = "Welcome to the blog index!";
+}
+
+<div class="text-center">
+    <h1 class="display-3">Blog Tracks</h1>
+    <p>@ViewData["Message"]</p>
+    <div>
+        <h2>Find the blog posts.</h2>
+        <div>
+            <p>Browse blog posts via constraint route:</p>
+            <ul class="list-unstyled">
+                <li><a href="/blog/archive/2023/10/01">/blog/archive/2023/10/01</a></li>
+                <li><a href="/blog/archive/2024/08/14">/blog/archive/2024/08/14</a></li>
+                <li><a href="/blog/archive/2025/01/15">/blog/archive/2025/01/15</a></li>
+                <li><a href="/blog/archive/2025/99/99">(Invalid) month must be 1-12 and day 1-31</a></li>
+                <li><a href="/blog/archive/2019/01/31">(Invalid) year must be >-2020</a></li>
+            </ul>
+        </div>
+    </div>
+    <p><a href="/">Back to Home</a></p>
+</div>
+    

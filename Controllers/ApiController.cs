@@ -40,5 +40,13 @@ namespace RoutingDemo.Controllers
             var version = new { Version = "1.0.0", ReleaseDate = "2023-10-01", FrameworkName = ".NET 8" };
             return Ok(version);
         }
+        //Adding an action for versioned route
+
+        
+        public IActionResult Version(string version)
+        {
+            var apiVersion = new { apiVersion = version, Status ="Versioned ApI End Point",TimeStamp=DateTime.UtcNow };
+            return Ok(apiVersion);
+        }
     }
 }

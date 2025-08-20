@@ -1,0 +1,21 @@
+
+@{
+    ViewData["Title"] = "Blog - Archive";
+}
+
+<div class="text-center">
+    <h2>@ViewData["Message"] - @ViewData["Year"]-@ViewData["Month"]-@ViewData["Day"]</h2>
+    <div>
+        <p>Explore blog posts from this date:</p>
+        <div class="card card-body">
+            <ul>
+                <li>Routes showcase how to use route constraints in ASP.NET core routing.</li>
+                <li>Year: @ViewData["Year"]</li>
+                <li>Month: @ViewData["Month"] (must be 1-12 and int)</li>
+                <li>Day: @ViewData["Day"] (must be 1-31 and int)</li>
+            </ul>
+        </div>
+        
+        <p><a href="/">Back to Home</a></p>
+    </div>
+</div>

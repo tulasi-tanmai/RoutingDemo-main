@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "User - Index";
+}
+
+<h1>@ViewData["Title"]</h1>
+<p>@ViewData["Message"]</p>
+
+<div class="mt-4">
+    <h5>Try the following URLs:</h5>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <a href="/users/profile/Parth">/users/profile/Parth</a>
+        </li>
+        <li class="list-group-item">
+            <a href="/users/profile/Parth?tab=details">/users/profile/Parth?tab=details</a>
+        </li>
+        <li class="list-group-item">
+            <a href="/users/profile/Pa">/users/profile/Pa (too short username → will 404)</a>
+        </li>
+    </ul>
+</div>
